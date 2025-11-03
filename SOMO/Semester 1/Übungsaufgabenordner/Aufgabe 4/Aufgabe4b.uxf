@@ -1,0 +1,22 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>180</x><y>270</y><w>189</w><h>63</h></coordinates><panel_attributes>_Jovan Balaba:Vater_
+--
+name: String ="Jovan Balaba"
+alter: Integer ="80"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>513</x><y>270</y><w>189</w><h>63</h></coordinates><panel_attributes>_Estila Balaba:Mutter_
+--
+name: String ="Estila Balaba"
+alter: Integer ="60"</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>243</x><y>288</y><w>261</w><h>162</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Nachkomme von&gt;&gt;</panel_attributes><additional_attributes>160;10;160;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>279</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Verheiratet</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>288</y><w>153</w><h>162</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Nachkomme von&gt;&gt;</panel_attributes><additional_attributes>10;10;10;160;150;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>405</y><w>189</w><h>63</h></coordinates><panel_attributes>Vanessa Balaba: Kind_
+--
+name: String="Vanessa Balaba"
+alter: Integer = "28"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>63</x><y>396</y><w>189</w><h>63</h></coordinates><panel_attributes>Karl-Heinz Balaba: Kind_
+--
+name: String="Karl-Heinz Balaba"
+alter: Integer = "25"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>333</x><y>90</y><w>189</w><h>63</h></coordinates><panel_attributes>_object: Class_
+--
+id: Long="36548"
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>36</y><w>90</w><h>27</h></coordinates><panel_attributes>/AbstractClass/
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

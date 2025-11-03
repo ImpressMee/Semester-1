@@ -1,0 +1,1 @@
+Das Problem bei diesem Petrinetz ist, dass C3 Sowohl C1 als auch C2 ausschließt, sollte dieser die Fotokopier-Software nutzen. C2 und C1 können unabhängig von einander agieren. C2 benutzt den Drucker und C1 benutzt den Scanner. Sollte jedoch entweder C2 oder C1 Feuern, wird C3 ausgeschlossen.

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+    <net id="Net-One" type="P/T net">
+        <token id="Default" enabled="true" red="0" green="0" blue="0"/>
+        <labels x="988" y="104" width="107" height="326" border="true">
+            <text>Das Problem bei diesem Petrinetz ist, dass C3 Sowohl C1 als auch C2 ausschließt, sollte dieser die Fotokopier-Software nutzen. C2 und C1 können unabhängig von einander agieren. C2 benutzt den Drucker und C1 benutzt den Scanner. Sollte jedoch entweder C2 oder C1 Feuern, wird C3 ausgeschlossen.</text>
+        </labels>
+        <labels x="1161" y="54" width="107" height="438" border="true">
+            <text>Stellen:
+C1, C2, C3, Netzwerk-Drucker, Netzwerk-Scanner
+
+Transitionen:
+Druckernutzung, Scannernutzung, Fotokopier-Software
+
+Verbindungen:
+
+C1 -&gt; Druckernutzung 	  -&gt; Netzwerkdrucker
+C2 -&gt; Scannernutzung 	  -&gt; Netzwerk-Scanner
+C3 -&gt; Fotokopier-Software -&gt; Netzwerk-Drucker &amp; Netzwerk-Scanner</text>
+        </labels>
+        <place id="C1">
+            <graphics>
+                <position x="480.0" y="135.0"/>
+            </graphics>
+            <name>
+                <value>C1</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="C2">
+            <graphics>
+                <position x="270.0" y="120.0"/>
+            </graphics>
+            <name>
+                <value>C2</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="C3">
+            <graphics>
+                <position x="360.0" y="300.0"/>
+            </graphics>
+            <name>
+                <value>C3</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="Netzwerk-Drucker">
+            <graphics>
+                <position x="270.0" y="330.0"/>
+            </graphics>
+            <name>
+                <value>Netzwerk-Drucker</value>
+                <graphics>
+                    <offset x="-2.042810365310288E-14" y="14.615384615384624"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,1</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="Netzwerk-Scanner">
+            <graphics>
+                <position x="480.0" y="345.0"/>
+            </graphics>
+            <name>
+                <value>Netzwerk-Scanner</value>
+                <graphics>
+                    <offset x="120.76923076923069" y="16.153846153846185"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,1</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <transition id="Druckernutzung">
+            <graphics>
+                <position x="270.0" y="195.0"/>
+            </graphics>
+            <name>
+                <value>Druckernutzung</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>180</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="Fotokopier-Software">
+            <graphics>
+                <position x="360.0" y="210.0"/>
+            </graphics>
+            <name>
+                <value>Fotokopier-Software</value>
+                <graphics>
+                    <offset x="116.0" y="-9.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="Scannernutzung">
+            <graphics>
+                <position x="480.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>Scannernutzung</value>
+                <graphics>
+                    <offset x="105.0000000000001" y="15.769230769230752"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="T3">
+            <graphics>
+                <position x="645.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>T3</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="T4">
+            <graphics>
+                <position x="120.0" y="210.0"/>
+            </graphics>
+            <name>
+                <value>T4</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="T5">
+            <graphics>
+                <position x="360.0" y="420.0"/>
+            </graphics>
+            <name>
+                <value>T5</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <arc id="C1 to T3" source="C1" target="T3">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="505" y="154" curvePoint="false"/>
+            <arcpath id="001" x="652" y="233" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="C2 to T4" source="C2" target="T4">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="269" y="140" curvePoint="false"/>
+            <arcpath id="001" x="137" y="217" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="C3 to T5" source="C3" target="T5">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="372" y="326" curvePoint="false"/>
+            <arcpath id="001" x="373" y="417" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Druckernutzung to C2" source="Druckernutzung" target="C2">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="281" y="191" curvePoint="false"/>
+            <arcpath id="001" x="281" y="146" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Fotokopier-Software to C3" source="Fotokopier-Software" target="C3">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="372" y="237" curvePoint="false"/>
+            <arcpath id="001" x="372" y="297" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Netzwerk-Drucker to Druckernutzung" source="Netzwerk-Drucker" target="Druckernutzung">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="281" y="327" curvePoint="false"/>
+            <arcpath id="001" x="281" y="221" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Netzwerk-Drucker to Fotokopier-Software" source="Netzwerk-Drucker" target="Fotokopier-Software">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="290" y="330" curvePoint="false"/>
+            <arcpath id="001" x="366" y="223" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Netzwerk-Scanner to Fotokopier-Software" source="Netzwerk-Scanner" target="Fotokopier-Software">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="482" y="345" curvePoint="false"/>
+            <arcpath id="001" x="376" y="222" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Netzwerk-Scanner to Scannernutzung" source="Netzwerk-Scanner" target="Scannernutzung">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="492" y="342" curvePoint="false"/>
+            <arcpath id="001" x="492" y="252" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Scannernutzung to C1" source="Scannernutzung" target="C1">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="493" y="222" curvePoint="false"/>
+            <arcpath id="001" x="492" y="161" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T3 to Netzwerk-Scanner" source="T3" target="Netzwerk-Scanner">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="651" y="243" curvePoint="false"/>
+            <arcpath id="001" x="504" y="348" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T4 to Netzwerk-Drucker" source="T4" target="Netzwerk-Drucker">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="136" y="227" curvePoint="false"/>
+            <arcpath id="001" x="270" y="333" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T5 to Netzwerk-Drucker" source="T5" target="Netzwerk-Drucker">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="366" y="433" curvePoint="false"/>
+            <arcpath id="001" x="292" y="353" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T5 to Netzwerk-Scanner" source="T5" target="Netzwerk-Scanner">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="376" y="432" curvePoint="false"/>
+            <arcpath id="001" x="479" y="365" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+    </net>
+</pnml>

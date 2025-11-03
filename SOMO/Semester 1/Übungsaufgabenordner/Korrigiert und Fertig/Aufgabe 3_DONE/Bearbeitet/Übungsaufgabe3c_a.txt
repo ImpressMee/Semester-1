@@ -1,0 +1,11 @@
+Stellen:
+C1, C2, C3, Netzwerk-Drucker, Netzwerk-Scanner
+
+Transitionen:
+Druckernutzung, Scannernutzung, Fotokopier-Software
+
+Verbindungen:
+
+C1 -> Druckernutzung 	  -> Netzwerkdrucker
+C2 -> Scannernutzung 	  -> Netzwerk-Scanner
+C3 -> Fotokopier-Software -> Netzwerk-Drucker & Netzwerk-Scanner

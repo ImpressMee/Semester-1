@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+    <net id="Net-One" type="P/T net">
+        <token id="Default" enabled="true" red="0" green="0" blue="0"/>
+        <place id="Gelb">
+            <graphics>
+                <position x="510.0" y="180.0"/>
+            </graphics>
+            <name>
+                <value>Gelb</value>
+                <graphics>
+                    <offset x="31.0" y="-14.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="Grün">
+            <graphics>
+                <position x="510.0" y="285.0"/>
+            </graphics>
+            <name>
+                <value>Grün</value>
+                <graphics>
+                    <offset x="30.0" y="-15.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="Rot">
+            <graphics>
+                <position x="510.0" y="75.0"/>
+            </graphics>
+            <name>
+                <value>Rot</value>
+                <graphics>
+                    <offset x="28.0" y="-9.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,2</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <transition id="Geht auf Grün über">
+            <graphics>
+                <position x="690.0" y="210.0"/>
+            </graphics>
+            <name>
+                <value>Geht auf Grün über</value>
+                <graphics>
+                    <offset x="137.0" y="17.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="Gelb auf Rot">
+            <graphics>
+                <position x="345.0" y="105.0"/>
+            </graphics>
+            <name>
+                <value>Gelb auf Rot</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="Grün auf Gelb">
+            <graphics>
+                <position x="345.0" y="195.0"/>
+            </graphics>
+            <name>
+                <value>Grün auf Gelb</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="schaltet um auf Rot/Gelb">
+            <graphics>
+                <position x="660.0" y="90.0"/>
+            </graphics>
+            <name>
+                <value>schaltet um auf Rot/Gelb</value>
+                <graphics>
+                    <offset x="174.0" y="13.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>true</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <arc id="Gelb to Geht auf Grün über" source="Gelb" target="Geht auf Grün über">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="536" y="194" curvePoint="false"/>
+            <arcpath id="001" x="696" y="223" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Rot to Geht auf Grün über" source="Rot" target="Geht auf Grün über">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="534" y="95" curvePoint="false"/>
+            <arcpath id="001" x="697" y="216" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Rot to schaltet um auf Rot/Gelb" source="Rot" target="schaltet um auf Rot/Gelb">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="536" y="88" curvePoint="false"/>
+            <arcpath id="001" x="667" y="97" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="schaltet um auf Rot/Gelb to Gelb" source="schaltet um auf Rot/Gelb" target="Gelb">
+            <graphics/>
+            <inscription>
+                <value>Default,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="666" y="107" curvePoint="false"/>
+            <arcpath id="001" x="534" y="184" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+    </net>
+</pnml>
